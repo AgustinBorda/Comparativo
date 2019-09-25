@@ -7,7 +7,6 @@ longitud([_|XS],N) :- longitud(XS,S), N is S+1.
 longitud([],0).
 
 /*Elimina un elemento de una lista*/
-remove(_,[],[]).
 remove(X,[X|XS],XS) :- !.
 remove(X,[Y|XS],[Y|ZS]) :- remove(X,XS,ZS).
 
