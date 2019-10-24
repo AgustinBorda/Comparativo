@@ -22,5 +22,4 @@ multLista([X|XS],Y,[Z|YS]) :- multLista(XS,Y,YS), Z is X*Y.
 /*Retorna si un conjunto es un subconjunto de otro, representando los conjuntos como listas ordenadas*/
 subSet(_,[]).
 subSet([X|XS],[X|YS]) :- subSet(XS,YS).
-subSet([X|XS],[Y|YS]) :- X\=Y ,subSet(XS,[Y|YS]).
-subSet([_|XS],[Y|YS]) :- subSet(XS,[Y|YS]).
+subSet([X|XS],[Y|YS]) :- subSet(XS,[Y|YS]),X\=Y.
