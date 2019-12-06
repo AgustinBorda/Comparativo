@@ -1,5 +1,5 @@
 int y;
-/*global integer y*/
+/*Global integer y*/
 int inc_y(void){
   y=8;
   y++;
